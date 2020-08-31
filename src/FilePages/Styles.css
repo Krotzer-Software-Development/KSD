@@ -1,0 +1,319 @@
+
+/*
+whole Container
+*/
+.wholeContainer{
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+  
+}
+.TitleHome{
+   margin-left: auto;
+    text-align: center;
+}
+#homeTitle{
+    background-color: white;
+    color: black;
+}
+h1{
+    background-color: white;
+    color: black;
+    text-align: center;
+    
+}
+
+h4{
+    text-align: center;
+    background-color: white;
+    color: black;
+    text-align: center;
+    width: 50%;
+    padding: 1vw;
+}
+.messageBoxStyle{
+    width: 50vw;
+    height: 50vh;
+}
+#blockStyle{
+    background-color: white;
+    color: black;
+    margin-top: 2vh;
+    
+    font-family: helvetica;
+    padding: 2vw;
+}
+/*
+Navigation
+*/
+.navigation {
+    text-decoration: none;
+    position: absolute;
+    top: 10vh;
+    right: 0vh;
+    text-align: center;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+
+}
+#particles-js {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, rgba(117, 114, 113, 0.8) 10%, rgba(40, 49, 77, 0.8) 30%, rgba(29, 35, 71, 0.8) 50%, rgba(19, 25, 28, 0.8) 80%, rgba(15, 14, 14, .8) 100%), url(https://38.media.tumblr.com/tumblr_m00c3czJkM1qbukryo1_500.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+  
+  
+.naviContainer ul  {
+    display: inline;
+    
+}
+
+.naviContainer ul li {
+    
+    margin-top: 1vh;
+    display: block;
+    border: 1px;
+    border-style: solid;
+    border-color: black;
+    background-color: rgb(255, 246, 234);
+    padding: 1vw;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);   
+    -webkit-box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);  
+    border-radius: 5px;
+    
+    backdrop-filter: blur(40px);
+    opacity: 0.5;
+}
+
+.naviContainer .Active{
+    background-color: darkgrey;
+}
+
+.naviContainer ul   :hover{
+    background-color: darkgrey;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.port-pic-container{
+    opacity: 100%;
+    display: flex;
+    float: right;
+    width: 20vw;
+    height: 20vw;
+    margin-top: 10vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 20vw;
+    border-right: 1px;
+    border-style: solid;
+    border-right-color: white;
+  }
+
+  .flex-container {
+    display: flex;
+    align-items: stretch;
+    background-color: #f1f1f1;
+  }
+  
+  .flex-container > div {
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+  }
+/*
+App.js
+*/
+
+.BackGround{
+    height: 100vh;
+    width: 100vw;
+}
+.App{
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+}
+
+
+/*
+HomePage
+*/
+
+.homePage {
+    overflow-y: scroll; 
+    
+    padding: 4vw;
+    position: absolute;
+    top: 1vh;
+    right: 0vh;
+    float: right;
+    margin-right: 10vw;
+    width: 60vw;
+    height: 80vh;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);   
+    -webkit-box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);  
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, .15);
+    backdrop-filter: blur(5px);
+    opacity: 0.5;
+    border: 1px;
+    border-style: solid;
+    border-color:white;
+    
+}
+.homePage .Title {
+    z-index: 1;
+    text-align: center;
+}
+.logoNavi{
+    font-family: helvetica;
+
+}
+
+#iconTitle{
+    background-color: blanchedalmond;
+}
+/* About 
+*/
+.About {
+    overflow-y: scroll; 
+    
+    padding: 4vw;
+    position: absolute;
+    top: 1vh;
+    right: 0vh;
+    float: right;
+    margin-right: 10vw;
+    width: 60vw;
+    height: 80vh;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);   
+    -webkit-box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);  
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, .15);
+    backdrop-filter: blur(5px);
+    opacity: 0.5;
+    border: 1px;
+    border-style: solid;
+    border-color:white;
+    
+}
+.about-paragraph{
+    margin-top: 1vh;
+    background-color: white;
+    padding: 1px;
+    color: black;
+    padding: 4vw;
+    font-weight: bold;
+}
+/* Contact 
+*/
+.Contact {
+    overflow-y: scroll; 
+    
+    padding: 4vw;
+    position: absolute;
+    top: 1vh;
+    right: 0vh;
+    float: right;
+    margin-right: 10vw;
+    width: 60vw;
+    height: 80vh;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);   
+    -webkit-box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);  
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, .15);
+    backdrop-filter: blur(5px);
+    opacity: 0.5;
+    border: 1px;
+    border-style: solid;
+    border-color:white;
+    
+}
+#containerTitle{
+    
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
+    opacity: 100%;
+    color: white;
+    width: fit-content;
+    margin-top: 1vh;
+    display: block;
+    padding: 5px;
+    margin-bottom: 1vh;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, .15);
+    backdrop-filter: blur(40px);
+}
+/* Consult 
+*/
+.Consult {
+    overflow-y: scroll; 
+    
+    padding: 4vw;
+    position: absolute;
+    top: 1vh;
+    right: 0vh;
+    float: right;
+    margin-right: 10vw;
+    width: 60vw;
+    height: 80vh;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);   
+    -webkit-box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);  
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, .15);
+    backdrop-filter: blur(5px);
+    opacity: 0.5;
+    border: 1px;
+    border-style: solid;
+    border-color:white;
+    
+}
+/*
+Portfolio
+*/
+
+.Portfolio {
+    overflow-y: scroll; 
+    
+    padding: 4vw;
+    position: absolute;
+    top: 1vh;
+    right: 0vh;
+    float: right;
+    margin-right: 10vw;
+    width: 60vw;
+    height: 80vh;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);   
+    -webkit-box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);  
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, .15);
+    backdrop-filter: blur(5px);
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    border: 1px;
+    border-style: solid;
+    border-color:white;
+    
+}
+
+/*
+Footer
+*/
+.Footer {
+    margin-bottom: 0px;
+}
+#copyRight {
+    position: fixed;
+    bottom: -15px;
+    width: 100vw;
+    background-color: black;
+    color:white;
+    text-align: center;
+}
+
