@@ -1,123 +1,54 @@
 import React from 'react';
 import './FilePages/Styles.css';
-import Particles from 'react-particles-js';
+import {Navbar, Nav, NavDropdown} from 'react-bootstrap';
+import HomePage from './FilePages/HomePage';
+import ExampleRates from './FilePages/ExampleRates';
+import Contact from './FilePages/Contact';
+import Deposits from './FilePages/PaymentPage';
+import Portfolio from './FilePages/Portfolio';
+import {BrowserRouter, Route, Link } from 'react-router-dom';
 function App() {
   return (
-    <div className="App">
-		<div id="particles-js">
-		<Particles
-    params={{
-	    "particles": {
-			"number": {
-			  "value": 400,
-			  "density": {
-				"enable": true,
-				"value_area": 800
-			  }
-			},
-			"color": {
-			  "value": "#ffffff"
-			},
-			"shape": {
-			  "type": "image",
-			  "stroke": {
-				"width": 3,
-				"color": "#fff"
-			  },
-			  "polygon": {
-				"nb_sides": 5
-			  },
-			  "image": {
-				"src": "http://www.dynamicdigital.us/wp-content/uploads/2013/02/starburst_white_300_drop_2.png",
-				"width": 100,
-				"height": 100
-			  }
-			},
-			"opacity": {
-			  "value": 0.7,
-			  "random": false,
-			  "anim": {
-				"enable": false,
-				"speed": 1,
-				"opacity_min": 0.1,
-				"sync": false
-			  }
-			},
-			"size": {
-			  "value": 5,
-			  "random": true,
-			  "anim": {
-				"enable": false,
-				"speed": 20,
-				"size_min": 0.1,
-				"sync": false
-			  }
-			},
-			"line_linked": {
-			  "enable": false,
-			  "distance": 50,
-			  "color": "#ffffff",
-			  "opacity": 0.6,
-			  "width": 1
-			},
-			"move": {
-			  "enable": true,
-			  "speed": 5,
-			  "direction": "bottom",
-			  "random": true,
-			  "straight": false,
-			  "out_mode": "out",
-			  "bounce": false,
-			  "attract": {
-				"enable": true,
-				"rotateX": 300,
-				"rotateY": 1200
-			  }
-			}
-		  },
-		  "interactivity": {
-			"detect_on": "canvas",
-			"events": {
-			  "onhover": {
-				"enable": true,
-				"mode":  "bubble"
-			  },
-			  "onclick": {
-				"enable": true,
-				"mode": "repulse"
-			  },
-			  "resize": true
-			},
-			"modes": {
-			  "grab": {
-				"distance": 150,
-				"line_linked": {
-				  "opacity": 1
-				}
-			  },
-			  "bubble": {
-				"distance": 200,
-				"size": 40,
-				"duration": 2,
-				"opacity": 8,
-				"speed": 3
-			  },
-			  "repulse": {
-				"distance": 200,
-				"duration": 0.2
-			  },
-			  "push": {
-				"particles_nb": 4
-			  },
-			  "remove": {
-				"particles_nb": 2
-			  }
-			}
-		  },
-		  "retina_detect": true
-  }} ></Particles>
-		</div>
-    </div>
+    <div>
+    <div className="NaviStyle">
+    <BrowserRouter>
+    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+  <Navbar.Brand ><Link to="/Homepage"> KSD </Link>  </Navbar.Brand>
+  <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+  <Navbar.Collapse id="responsive-navbar-nav">
+    <Nav className="mr-auto">
+      <Nav.Link><Link to="/Contact"> Contact </Link></Nav.Link>
+      <Nav.Link><Link to="/PaymentPage"> Deposits </Link></Nav.Link>
+      <NavDropdown title="Portfolio" id="collasible-nav-dropdown">
+        <NavDropdown.Item href="https://www.homeraisedcairns.com/"> Home Raised Cairns - AKC Puppies</NavDropdown.Item>
+        <NavDropdown.Divider />
+        <NavDropdown.Item> <Link to="/ExampleRates"> Examples and App Pricing </Link></NavDropdown.Item>
+        <NavDropdown.Divider />
+        <NavDropdown.Item href="https://github.com/KrotzerSoftwareDevelopment/"> GitHub </NavDropdown.Item>
+      </NavDropdown>
+    </Nav>
+    <Nav>
+      <Nav.Link eventKey={2} href="https://www.linkedin.com/in/dean-krotzer-0800b11a2/">
+        LinkedIn
+      </Nav.Link>
+    </Nav>
+  </Navbar.Collapse>
+</Navbar>
+    <div className="grid-container">
+<main className="main">
+    <div className="content">
+    <Route path="/HomePage" exact={true} component={HomePage} />
+    <Route path="/PaymentPage" component={Deposits} />
+    <Route path="/Contact" component={Contact} />
+    <Route path="/ExampleRates" component={ExampleRates} />
+    <Route path="/Portfolio" component={Portfolio} />
+</div>
+    <HomePage />
+</main>
+</div>
+</BrowserRouter>
+</div>
+</div>
   );
 }
 

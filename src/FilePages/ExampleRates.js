@@ -1,12 +1,14 @@
 import React from 'react';
 
-function Constult () {
+function ExampleRates () {
   return (
     <div className="PageContainer">
     <div className="Page">     
-    <h1>Consult </h1>
+    <h1>Examples & Rates </h1>
     <div className="Intro">
-    Feel free to schedule an Appointment with me today! 
+        
+        
+     
     </div>
     <br />
     <br />
@@ -19,4 +21,4 @@ function Constult () {
   );
 }
 
-export default Constult;
+export default ExampleRates;
