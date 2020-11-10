@@ -5,13 +5,14 @@ import Home from './FilePages/Home';
 import './FilePages/Styles.css';
 import Contact from './FilePages/Contact';
 import Deposit from './FilePages/Deposit';
+import About from './FilePages/About';
 import { BrowserRouter as  Router, Route, Link, NavLink } from 'react-router-dom';
 
 const routes = [
-    { path: '/Home', name: 'Home', Component: Home },
+    { path: '/', name: 'Home', Component: Home },
     { path: '/Contact', name: 'Contact', Component: Contact },
     { path: '/Deposit', name: 'Deposit', Component: Deposit },
-    
+    { path: '/About', name: 'About', Component: About },
   ]
 function App () {
     const [expanded, setExpanded] = useState(false);
@@ -66,8 +67,8 @@ function App () {
                 
                   in={match != null}
                   
-                  timeout={1000}
-                  classNames="pages"
+                  
+                  
                   unmountOnExit
                 >
                  

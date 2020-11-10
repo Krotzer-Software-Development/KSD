@@ -6,7 +6,7 @@ import './FilePages/Styles.css';
 import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import * as serviceWorker from './serviceWorker';
-
+import Home from './FilePages/Home';
 import bg from './Assets/bg.png';
 import Footer from './FilePages/Footer.js';
 ReactDOM.render(
@@ -17,6 +17,7 @@ ReactDOM.render(
     <BrowserRouter>
     
     <App />
+    
 <Footer />
     </BrowserRouter>
     </div>

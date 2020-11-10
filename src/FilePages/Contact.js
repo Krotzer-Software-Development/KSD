@@ -79,65 +79,29 @@ render(){
               </Col>
               </Row>
               <br />
+              
+              
               <input type="text" className="form-control" placeholder="Phone Number" id="phone" value={this.state.phone} onChange={this.onPhoneChange.bind(this)} />
+          
               <br />
+              
+              <div className="email">
               <input type="email" className="form-control" id="email" placeholder="Email"  aria-describedby="emailHelp" value={this.state.email} onChange={this.onEmailChange.bind(this)} />
+              </div>
+              
           </div>
          
           <div className="form-group">
-              <label htmlFor="message">Brief discription of desired work needed</label>
+              <label htmlFor="message">Message:</label>
               <textarea className="form-control" rows="10" id="message" value={this.state.message} onChange={this.onMessageChange.bind(this)} />
           </div>
-        
+        <div className="Mobile">
           <div class="g-recaptcha" data-sitekey="6LddIOEZAAAAANyRLXS-CEU7ohRMY0AxbrQzfU3G"></div>
+          </div>
           <br />
       <button type="submit" className="btn btn-primary" value="Submit"> Submit </button>
      
         </form>
-   {/*}
-        <Form onSubmit={this.handleSubmit} >
-        <div id="PageContent">
-        <FormGroup>
-    
-        <Label for="name"><div id="SubTitle"> Name </div></Label>
-       
-        <div>First Name: <Input
-        
-             type="text"
-             name="name"
-             onChange={this.handleChange} />
-            </div>
-        </FormGroup>
-        </div>        
-        <div id="PageContent">
-     
-        <FormGroup>
-        <Label for="email"><div id="SubTitle"> Email </div></Label>
-        <div>Email : <Input
-             type="email"
-             name="email"
-             onChange={this.handleChange} />
-             </div>
-        </FormGroup>
-        </div>
-        <div id="PageContent">
-        <FormGroup>
-        <Label for="message"><div id="SubTitle"> Message </div></Label>
-        <Input
-             type="textarea"
-             className="messageBoxStyle"
-             name="message"
-             size="20vw"
-             onChange={this.handleChange} />
-        </FormGroup>
-        </div>
-        <div id="PageContent">
-          <div className="Button">
-          <button type="submit"> Submit </button>
-         </div>
-         </div>
-        </Form>
-        */}
 
         </div>
         </div>
