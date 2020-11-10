@@ -89,7 +89,7 @@ render(){
               <textarea className="form-control" rows="10" id="message" value={this.state.message} onChange={this.onMessageChange.bind(this)} />
           </div>
         
-          <div class="g-recaptcha" data-sitekey="6LddIOEZAAAAANyRLXS-CEU7ohRMY0AxbrQzfU3G"></div>
+          <div class="g-recaptcha" data-sitekey="something secret"></div>
           <br />
       <button type="submit" className="btn btn-primary" value="Submit"> Submit </button>
      
