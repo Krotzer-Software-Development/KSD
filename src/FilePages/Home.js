@@ -1,51 +1,52 @@
 import React from 'react';
 import '../FilePages/Styles.css';
-function HomePage() {
+import {Row, Col, Container} from 'react-bootstrap';
+function Home() {
   return (
     <div className="PageContainer">
       <div className="Page" >
         <h1> Web & Mobile App Developer </h1>
             <div className="Intro">
             <div id="Title"></div>
-          
             </div>
-
             <div className="PageBody">
-
+              <Container>
+            <Row>
+              <Col>
               <div id="PageContent">
+                
                  <li id="SubTitle"> Web Development </li>
-                 <br />
                  <li> Exisiting Web Site Modifications </li>
-                 <li> React Native Apps </li>
+               <li>Cross-platform Mobile Apps</li> 
                  <li> New Website Creation </li>
-                 <li>Troubleshooting</li>
                  <li>Debuging</li>
-                 <li>Search Engine Optimization (SEO)</li>
-                 <br />
-                 <li>Hearing impaired and disablity friendly can be implemented upon request.</li>
+                 <li>Search Engine Optimization </li>
+                 <li>Disabiliy friendly</li>
                  <li>And Much more!</li>
                  </div>
-
+                 </Col>
+                 <Col>
               <div id="PageContent">
                 <li id="SubTitle">Android Apps</li>
-                <br />
                 <li>Android Phone and Tablet Apps</li>
-                <li>Wear Os</li>
-                <li>Tv Os</li>
-                <li>Automotive</li>
-                <li>Cross-platform</li>
+                <li>Wearables</li>
+                <li>Tv app</li>
+                <li>Automotive apps</li>
+                
                 </div>
-
+                </Col>
+                <Col>
+                
               <div id="PageContent">
                 <li id="SubTitle">Apple Apps</li>
-                <br />
-                <li>Iphone Ios</li>
-                <li>Mac Os</li>
-                <li>Apple Watch Os</li>
-                <li>Tv Os</li>
-                <li>Cross-platform</li>
+                <li>Iphone </li>
+                <li>Mac </li>
+                <li>Apple Watch </li>
+                <li>Tv </li>
                 </div>
-                
+                </Col>
+                </Row>
+                </Container>
             </div>
       </div>
       </div>
@@ -54,4 +55,4 @@ function HomePage() {
 }
 
 
-export default HomePage;
+export default Home;

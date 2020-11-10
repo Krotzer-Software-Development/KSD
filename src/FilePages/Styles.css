@@ -2,14 +2,110 @@
 /*
 whole Container
 */
+.container {
+  position: center;
+  margin-top: 10vw;
+  position: relative;
+}
+
+.pages {
+  position: relative;
+}
+
+.containertwo{
+  position: relative;
+  margin-right: 20vw;
+}
+
+
+.pages-enter {
+  
+  
+  animation-name: slidein;
+}
+
+.pages-enter-active {
+   animation-duration: 1s;
+  animation-name: slidein;
+
+ 
+}
+
+ @keyframes slidein {
+  0% {
+    animation-duration: 1s;
+    transform: translate3d(100%, 0%, 0px);
+    
+}
+
+100% {
+  animation-duration: 1s;
+    transform: translate3d(0%, 0%, 0px);
+}
+} 
+
+
+
+/*
+*/
+.pages-exit {
+  animation-duration: 1s;
+  animation-name: slideout;
+}
+
+.pages-exit-active {
+  
+ 
+   animation-duration: 1s;
+   animation-name: slideout;
+   /* transition:  transform 400ms;
+  transition: opacity 30ms, transform 90ms;
+  transform: translateX(-100%); */
+}
+
+@keyframes slideout {
+  0% {
+    animation-duration: 1s;
+    transform: translate3d(0%, 0%, 0px );
+    
+}
+100% {
+  animation-duration: 1s;
+  transform: translate3d(100%, 0%, 0px);
+}
+}
+
+@keyframes slideinright {
+  0% {
+    animation-duration: 1s;
+    transform: translate3d(-1000%, 0%, 0px );
+    
+}
+100% {
+  animation-duration: 1s;
+  transform: translate3d(0%, 0%, 0px);
+}
+}
+
+
+@keyframes slideup {
+  0% {
+    animation-duration: 1s;
+    transform: translate3d(0%, 100%, 0px );
+    
+}
+100% {
+  animation-duration: 1s;
+  transform: translate3d(0%, 0%, 0px);
+}
+}
+
 .PageContainer{
     overflow-y: scroll; 
     padding: 4vw;
     position: relative;
     bottom: 10vh;
-    margin-right: 5vw;
     margin-top: 15vh;
-    margin-left: 5vw;
     width: 90vw;
     height: 80vh;
     box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);   
@@ -23,11 +119,15 @@ whole Container
     border-color:white;
 }
 .Page{
+  animation-duration: 2s;
+    animation-name: slideup;
     background-color: black;
     color: white ;
     margin-top: 2vh;
     font-family: helvetica;
     padding: 2vw;
+    
+   
 }
 .Intro{
   background-color: white;
@@ -36,13 +136,19 @@ whole Container
   color: black;
 }
 .PageBody{
-    background-color: black;
+    
+    animation-duration: 2s;
+    animation-name: slideinright;
     color: white ;
     margin-top: 2vh;
     font-family: helvetica;
     padding: 2vw;
+
 }
 #PageContent{
+  animation-duration: 2s;
+    animation-name: slideup;
+  
     background-color: white;
     color: black;
     text-align: center;
@@ -58,6 +164,8 @@ whole Container
   font-size: x-small;
 }
 h1{
+  animation-duration: 2s;
+    animation-name: slidein;
     background-color: white;
     padding-top: 1vh;
     padding-bottom: 1vh;
@@ -75,24 +183,7 @@ li{
     list-style-type: none;
     
 }
-.grid-container{
-    display: gri/d;
-    grid-template-areas:
-    "header"
-    "main"
-    "footer";
-    grid-template-columns:  1fr;
-    grid-template-rows: 5rem 1fr 5rem;
-    height: 100vh;
-  }
-.header{
-    grid-area: header;
-    background-color: #203040;
-    color: #ffffff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+
 
 .App-header {
   background-color: #282c34;
@@ -104,14 +195,6 @@ li{
   font-size: calc(10px + 2vmin);
   color: white;
 }
-.main{
-    grid-area: main;
-  }
-  .footer{
-    grid-area: footer;
-  }
-
-
 
 
 /*
@@ -122,19 +205,19 @@ Navigation
   
 .NaviStyle{
     
-  position: fixed;
-  top: 0px;
+
+  
   width: 100vw;
   height: 5vh;
   color:white;
   text-align: center;
   font-family: Helvetica, sans-serif;
   font-weight: bolder;
-  float: right;
+ 
     
 }
 
-.port-pic-container{
+/* .port-pic-container{
     opacity: 100%;
     display: flex;
     float: right;
@@ -147,7 +230,7 @@ Navigation
     border-right: 1px;
     border-style: solid;
     border-right-color: white;
-  }
+  } */
 
   .flex-container {
     display: flex;
@@ -169,8 +252,11 @@ App.js
 */
 
 .bgStyle{
+    position: absolute;
+    top: 0px;
     height: 100vh;
     width: 100vw;
+    z-index: -1;
 }
 
 .logoNavi{
@@ -191,7 +277,7 @@ App.js
     text-decoration: underline;
 }
 
-
+/*
 .fade-enter .PageContainer {
   opacity: 0;
   transform: translateX(-100%);
@@ -212,10 +298,11 @@ App.js
 .fade-exit-active .PageContainer {
   transition: opacity 500ms, transform 500ms;
 }
-
+*/
 /*
 Footer
 */
+
 .Footer {
     margin-bottom: 0px;
 }
@@ -228,9 +315,37 @@ Footer
     text-align: center;
 }
 
+
+/* Mobile */
+@media only screen and (min-width:320px) and (max-width:558px) {
+  .containertwo{
+    width: 80vw;
+    position: relative;
+    margin-top: 39vw;
+    z-index: 10;
+  }
+  .contactIntro{
+
+  /*img src */
+  }
+}
+
+
+@media only screen and (min-width:769px) {
+  .containertwo{
+    width: 80vw;
+    position: relative;
+    margin-top: 9vw;
+    z-index: 10;
+  }
+  .email{
+    
+  }
+}
 /*
 Animation
 */
+/*/
 .dialog-enter {
   opacity: 0.01;
   transform: scale(1.1);
@@ -252,3 +367,4 @@ Animation
   transform: scale(1.1);
   transition: all 300ms;
 }
+*/

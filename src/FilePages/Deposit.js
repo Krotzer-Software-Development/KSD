@@ -1,6 +1,6 @@
 import React from 'react';
 
-function PaymentPage() {
+function Deposit() {
   return (
     <div className="PageContainer">
     <div className="Page">
@@ -37,4 +37,4 @@ function PaymentPage() {
   );
 }
 
-export default PaymentPage;
+export default Deposit;

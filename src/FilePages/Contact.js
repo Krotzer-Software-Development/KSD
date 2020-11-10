@@ -1,12 +1,15 @@
 import React from 'react';
 import axios from 'axios';
+import {Row, Col, Container} from 'react-bootstrap';
 import {Form, FormGroup, Input, Label, Button } from 'reactstrap';
 class Contact extends React.Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      name: '',
+      firstName: '',
+      lastName: '',
+      phone: '',
       email: '',
       message: ''
     }
@@ -29,7 +32,7 @@ class Contact extends React.Component {
   }
 
   resetForm(){
-    this.setState({name: "", email: "", message: ""})
+    this.setState({firstName: "", lastName: "", phone: "", email: "", message: ""})
   }
 
 render(){
@@ -38,12 +41,25 @@ render(){
     <div className="Page">
     <h1> Contact </h1>
     <div className="Intro">
-      <div className="email">
-    {/*Email: >*/}
+     
+ 
+
+        <Row>
+          <div className="email">
+        
+ <Col>
     Email: <a href="mailto:krotzersoftwaredevelopment@gmail.com"> krotzersoftwaredevelopment@gmail.com </a>
-    <br />
-    Phone:  <a href="tel:5418199410"> (541) 819 9410 </a>
+    </Col>
     </div>
+<div className="phone">
+    <Col>
+    Phone:  <a href="tel:5418199410"> (541) 819 9410 </a>
+    </Col>
+    </div>
+
+    </Row>
+    
+    
     </div>
    
    
@@ -53,21 +69,30 @@ render(){
   <form id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
           <div className="form-group">
               <label htmlFor="name">Contact KSD today!</label>
-              <input type="text" className="form-control" placeholder="First Name" id="name" value={this.state.name} onChange={this.onNameChange.bind(this)} />
+              <Row>
+                <Col>
+              <input type="text" className="form-control" placeholder="First Name" id="firstName" value={this.state.firstName} onChange={this.onFirstNameChange.bind(this)} />
+              </Col>
               <br />
-              <input type="text" className="form-control" placeholder="Last Name" id="name" value={this.state.name} onChange={this.onNameChange.bind(this)} />
-          
+              <Col>
+              <input type="text" className="form-control" placeholder="Last Name" id="lastName" value={this.state.lastName} onChange={this.onLastNameChange.bind(this)} />
+              </Col>
+              </Row>
               <br />
-              <input type="text" className="form-control" placeholder="Phone Number" id="name" value={this.state.name} onChange={this.onNameChange.bind(this)} />
+              <input type="text" className="form-control" placeholder="Phone Number" id="phone" value={this.state.phone} onChange={this.onPhoneChange.bind(this)} />
               <br />
               <input type="email" className="form-control" id="email" placeholder="Email"  aria-describedby="emailHelp" value={this.state.email} onChange={this.onEmailChange.bind(this)} />
           </div>
          
           <div className="form-group">
-              <label htmlFor="message">Brief discription of your </label>
+              <label htmlFor="message">Brief discription of desired work needed</label>
               <textarea className="form-control" rows="10" id="message" value={this.state.message} onChange={this.onMessageChange.bind(this)} />
           </div>
-          <button type="submit" className="btn btn-primary">Submit</button>
+        
+          <div class="g-recaptcha" data-sitekey="6LddIOEZAAAAANyRLXS-CEU7ohRMY0AxbrQzfU3G"></div>
+          <br />
+      <button type="submit" className="btn btn-primary" value="Submit"> Submit </button>
+     
         </form>
    {/*}
         <Form onSubmit={this.handleSubmit} >
@@ -120,8 +145,14 @@ render(){
         
       );
   }
-  onNameChange(event) {
-    this.setState({name: event.target.value})
+  onFirstNameChange(event) {
+    this.setState({firstName: event.target.value})
+  }
+  onLastNameChange(event) {
+    this.setState({lastName: event.target.value})
+  }
+  onPhoneChange(event) {
+    this.setState({phone: event.target.value})
   }
 
   onEmailChange(event) {

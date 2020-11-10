@@ -1,10 +1,10 @@
 import React from 'react';
 
-function About () {
+function ExampleRates () {
   return (
     <div className="PageContainer">
     <div className="Page">     
-    <h1>About Me </h1>
+    <h1>Examples & Rates </h1>
     <div className="Intro">
         
         
@@ -21,4 +21,4 @@ function About () {
   );
 }
 
-export default About;
+export default ExampleRates;
